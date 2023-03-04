@@ -129,7 +129,7 @@ open class BaseNotificationBanner: UIView {
     public var shouldPostAccessibilityNotification: Bool = true
 
     /// The view that the notification layout is presented on. The constraints/frame of this should not be changed
-    internal var contentView: UIView!
+    public var contentView: UIView!
 
     /// A view that helps the spring animation look nice when the banner appears
     internal var spacerView: UIView!
@@ -171,7 +171,7 @@ open class BaseNotificationBanner: UIView {
     private(set) var bannerPosition: BannerPosition!
 
     /// The notification banner sides edges insets from superview. If presented - spacerView color will be transparent
-    internal var bannerEdgeInsets: UIEdgeInsets? = nil {
+    public var bannerEdgeInsets: UIEdgeInsets? = nil {
         didSet {
             if bannerEdgeInsets != nil {
                 spacerView.backgroundColor = .clear
