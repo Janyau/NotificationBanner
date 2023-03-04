@@ -138,7 +138,7 @@ open class BaseNotificationBanner: UIView {
     internal var customView: UIView?
 
     /// The default offset for spacerView top or bottom
-    internal var spacerViewDefaultOffset: CGFloat = 10.0
+    public var spacerViewDefaultOffset: CGFloat = 10.0
 
     /// The maximum number of banners simultaneously visible on screen
     internal var maximumVisibleBanners: Int = 1
@@ -180,7 +180,7 @@ open class BaseNotificationBanner: UIView {
     }
 
     /// Object that stores the start and end frames for the notification banner based on the provided banner position
-    internal var bannerPositionFrame: BannerPositionFrame!
+    public var bannerPositionFrame: BannerPositionFrame!
 
     /// The user info that gets passed to each notification
     private var notificationUserInfo: [String: BaseNotificationBanner] {
@@ -276,7 +276,7 @@ open class BaseNotificationBanner: UIView {
         }
     }
 
-    internal func spacerViewHeight() -> CGFloat {
+    public func spacerViewHeight() -> CGFloat {
         if shouldAdjustForDynamicIsland() {
             return 44.0
         } else if shouldAdjustForNotchFeaturedIphone() {
