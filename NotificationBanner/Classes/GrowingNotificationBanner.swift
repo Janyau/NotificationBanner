@@ -167,6 +167,7 @@ open class GrowingNotificationBanner: BaseNotificationBanner {
         }
         
         contentView.addSubview(outerStackView)
+        let padding = 20
         outerStackView.snp.makeConstraints { (make) in
             if #available(iOS 11.0, *) {
                 make.left.equalTo(safeAreaLayoutGuide).offset(padding)
