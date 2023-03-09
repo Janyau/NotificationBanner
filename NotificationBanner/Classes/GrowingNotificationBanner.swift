@@ -78,7 +78,7 @@ open class GrowingNotificationBanner: BaseNotificationBanner {
     }
     
     /// Spacing between the last label and the bottom edge of the banner
-    private let verticalSpacing: CGFloat = 14.0
+    private var verticalSpacing: CGFloat = 14.0
     
     /// Spacing between title and subtitle
     private let innerSpacing: CGFloat = 2.5
