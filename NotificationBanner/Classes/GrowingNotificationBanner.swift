@@ -133,7 +133,14 @@ open class GrowingNotificationBanner: BaseNotificationBanner {
         }
         
         if let leftView = leftView {
-            outerStackView.addArrangedSubview(leftView)
+            let vStackView = UIStackView()
+            vStackView.axis = .vertical
+            vStackView.spacing = 0
+            vStackView.addArrangedSubview(leftView)
+            vStackView.isLayoutMarginsRelativeArrangement = true
+            vStackView.layoutMargins = UIEdgeInsets(top: 3.85, left: 0, bottom: 0, right: 0)
+            
+            outerStackView.addArrangedSubview(vStackView)
             leftView.snp.makeConstraints { $0.size.equalTo(sideViewSize) }
         }
         
